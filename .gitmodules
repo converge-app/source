@@ -1,0 +1,42 @@
+[submodule "bidding-service"]
+	path = bidding-service
+	url = git@github.com:converge-app/bidding-service.git
+[submodule "projects-service"]
+	path = projects-service
+	url = git@github.com:converge-app/projects-service.git
+[submodule "users-service"]
+	path = users-service
+	url = git@github.com:converge-app/users-service.git
+[submodule "authentication-service"]
+	path = authentication-service
+	url = git@github.com:converge-app/authentication-service.git
+[submodule "profile-service"]
+	path = profile-service
+	url = git@github.com:converge-app/profile-service.git
+[submodule "chat-service"]
+	path = chat-service
+	url = git@github.com:converge-app/chat-service.git
+[submodule "converge-spa"]
+	path = converge-spa
+	url = git@github.com:converge-app/converge-spa.git
+[submodule "traefik"]
+	path = traefik
+	url = git@github.com:converge-app/traefik.git
+[submodule "payments-service"]
+	path = payments-service
+	url = git@github.com:converge-app/payments-service.git
+[submodule "collaboration-broker-service"]
+	path = collaboration-broker-service
+	url = git@github.com:converge-app/collaboration-broker-service.git
+[submodule "audit-service"]
+	path = audit-service
+	url = git@github.com:converge-app/audit-service.git
+[submodule "files-service"]
+	path = files-service
+	url = git@github.com:converge-app/files-service.git
+[submodule "collaboration-service"]
+	path = collaboration-service
+	url = git@github.com:converge-app/collaboration-service.git
+[submodule "jaeger"]
+	path = jaeger
+	url = git@github.com:converge-app/jaeger.git
