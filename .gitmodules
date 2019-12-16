@@ -40,3 +40,6 @@
 [submodule "jaeger"]
 	path = jaeger
 	url = git@github.com:converge-app/jaeger.git
+[submodule "daily-standup"]
+	path = daily-standup
+	url = git@github.com:converge-app/daily-standup.git
