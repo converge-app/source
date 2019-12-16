@@ -43,3 +43,6 @@
 [submodule "utility"]
 	path = utility
 	url = git@github.com:converge-app/utility.git
+[submodule "bake-artifacts"]
+	path = bake-artifacts
+	url = git@github.com:converge-app/bake-artifacts.git
