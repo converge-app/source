@@ -1,8 +1,0 @@
-@startuml
-class PaymentCreationDto {
-    + ProjectId : string <<get>> <<set>>
-    + FreelancerId : string <<get>> <<set>>
-    + Message : string <<get>> <<set>>
-    + Amount : decimal <<get>> <<set>>
-}
-@enduml

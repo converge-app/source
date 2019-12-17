@@ -1,6 +1,0 @@
-@startuml
-class AuditCreationDto {
-    + UserId : string <<get>> <<set>>
-    + Content : string <<get>> <<set>>
-}
-@enduml

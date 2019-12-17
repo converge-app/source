@@ -1,6 +1,0 @@
-@startuml
-class UserData {
-    + Id : string <<get>> <<set>>
-    + Email : string <<get>> <<set>>
-}
-@enduml

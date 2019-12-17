@@ -1,5 +1,0 @@
-@startuml
-class AppSettings {
-    + Secret : string <<get>> <<set>>
-}
-@enduml

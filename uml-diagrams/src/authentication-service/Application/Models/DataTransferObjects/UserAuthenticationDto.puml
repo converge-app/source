@@ -1,6 +1,0 @@
-@startuml
-class UserAuthenticationDto {
-    + Email : string <<get>> <<set>>
-    + Password : string <<get>> <<set>>
-}
-@enduml

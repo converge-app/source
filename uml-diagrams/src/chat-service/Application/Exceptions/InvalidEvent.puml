@@ -1,9 +1,0 @@
-@startuml
-class InvalidMessage {
-    + InvalidMessage()
-    + InvalidMessage(message:string)
-    + InvalidMessage(message:string, inner:Exception)
-    # InvalidMessage(info:SerializationInfo, context:StreamingContext)
-}
-Exception <|-- InvalidMessage
-@enduml

@@ -1,6 +1,0 @@
-@startuml
-class AddContactDTO {
-    + SenderId : string <<get>> <<set>>
-    + ReceiverId : string <<get>> <<set>>
-}
-@enduml

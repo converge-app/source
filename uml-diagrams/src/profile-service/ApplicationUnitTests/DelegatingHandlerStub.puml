@@ -1,9 +1,0 @@
-@startuml
-class DelegatingHandlerStub {
-    - <<readonly>> _handlerFunc : Func<HttpRequestMessage, CancellationToken, Task<HttpResponseMessage>>
-    + DelegatingHandlerStub()
-    + DelegatingHandlerStub(handlerFunc:Func<HttpRequestMessage, CancellationToken, Task<HttpResponseMessage>>)
-    # <<override>> SendAsync(request:HttpRequestMessage, cancellationToken:CancellationToken) : Task<HttpResponseMessage>
-}
-DelegatingHandler <|-- DelegatingHandlerStub
-@enduml

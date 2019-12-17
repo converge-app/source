@@ -1,8 +1,0 @@
-@startuml
-class ProjectNotFound {
-    + ProjectNotFound()
-    + ProjectNotFound(message:string)
-    + ProjectNotFound(message:string, inner:System.Exception)
-    # ProjectNotFound(info:SerializationInfo, context:StreamingContext)
-}
-@enduml

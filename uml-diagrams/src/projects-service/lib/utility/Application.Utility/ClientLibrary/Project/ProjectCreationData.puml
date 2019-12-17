@@ -1,7 +1,0 @@
-@startuml
-class ProjectCreationData {
-    + OwnerId : string <<get>> <<set>>
-    + FreelancerId : string <<get>> <<set>>
-    + ProjectContent : ProjectContentData <<get>> <<set>>
-}
-@enduml

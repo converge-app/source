@@ -1,8 +1,0 @@
-@startuml
-class HealthController {
-    - <<readonly>> dbContext : IDatabaseContext
-    + HealthController(dbContext:IDatabaseContext)
-    + Ping() : ActionResult
-}
-Controller <|-- HealthController
-@enduml

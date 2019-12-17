@@ -1,6 +1,0 @@
-@startuml
-class Program {
-    + {static} Main(args:string[]) : void
-    + {static} CreateWebHostBuilder(args:string[]) : IWebHostBuilder
-}
-@enduml

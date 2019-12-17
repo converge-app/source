@@ -1,6 +1,0 @@
-@startuml
-class WithdrawCreationDto {
-    + UserId : string <<get>> <<set>>
-    + Amount : long <<get>> <<set>>
-}
-@enduml

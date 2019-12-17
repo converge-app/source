@@ -1,6 +1,0 @@
-@startuml
-class UserUpdateDto {
-    + Id : string <<get>> <<set>>
-    + Password : string <<get>> <<set>>
-}
-@enduml

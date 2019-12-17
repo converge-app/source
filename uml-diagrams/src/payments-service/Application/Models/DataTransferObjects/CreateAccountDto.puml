@@ -1,6 +1,0 @@
-@startuml
-class CreateAccountDto {
-    + UserId : string <<get>> <<set>>
-    + AuthorizationCode : string <<get>> <<set>>
-}
-@enduml

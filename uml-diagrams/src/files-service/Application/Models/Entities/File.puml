@@ -1,7 +1,0 @@
-@startuml
-class File {
-    + Id : string <<get>> <<set>>
-    + BucketLink : string <<get>> <<set>>
-    + UserId : string <<get>> <<set>>
-}
-@enduml
