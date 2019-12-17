@@ -1,0 +1,8 @@
+@startuml
+class EventCreationDto {
+    + ProjectId : string <<get>> <<set>>
+    + OwnerId : string <<get>> <<set>>
+    + Type : string <<get>> <<set>>
+    + Content : string <<get>> <<set>>
+}
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class ProjectUtility <<static>> {
+    + {static} <<async>> CreateProject(project:HttpClient, user:ProjectCreationData, isLocal:bool) : Task<ProjectData>
+    + {static} GenerateProject(ownerId:string) : ProjectCreationData
+}
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+class AuditController {
+    - <<readonly>> _mapper : IMapper
+    - <<readonly>> _auditRepository : IAuditRepository
+    + AuditController(auditRepository:IAuditRepository, mapper:IMapper)
+    + <<async>> Add(auditDto:AuditCreationDto) : Task<IActionResult>
+    + <<async>> Get(userId:string, pageSize:int, pageNumber:int) : Task<IActionResult>
+}
+ControllerBase <|-- AuditController
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+class UsersController {
+    - <<readonly>> _mapper : IMapper
+    - <<readonly>> _userRepository : IUserRepository
+    - <<readonly>> _userService : IUserService
+    - _appSettings : AppSettings
+    + UsersController(userService:IUserService, userRepository:IUserRepository, mapper:IMapper, appSettings:IOptions<AppSettings>)
+    + CreateUser(userDto:UserCreationDto) : IActionResult
+    + GetAll() : IActionResult
+    + GetById(id:string) : IActionResult
+    + GetByEmail(email:string) : IActionResult
+    + Update(id:string, userDto:UserUpdateDto) : IActionResult
+    + Delete(id:string) : IActionResult
+}
+ControllerBase <|-- UsersController
+@enduml

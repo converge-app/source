@@ -1,0 +1,5 @@
+@startuml
+class PayoutCreatedDto {
+    + PayoutId : string <<get>> <<set>>
+}
+@enduml

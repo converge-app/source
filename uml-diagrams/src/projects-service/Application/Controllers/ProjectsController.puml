@@ -1,0 +1,18 @@
+@startuml
+class ProjectsController {
+    - <<readonly>> _mapper : IMapper
+    - <<readonly>> _projectRepository : IProjectRepository
+    - <<readonly>> _projectService : IProjectService
+    + ProjectsController(projectService:IProjectService, projectRepository:IProjectRepository, mapper:IMapper)
+    + <<async>> CreateProject(projectDto:ProjectCreationDto) : Task<IActionResult>
+    + GetAll() : IActionResult
+    + GetByOwnerId(id:string) : IActionResult
+    + GetByFreelancerId(id:string) : IActionResult
+    + <<async>> GetByUser(userId:string) : Task<IActionResult>
+    + <<async>> GetOpen() : Task<IActionResult>
+    + GetById(id:string) : IActionResult
+    + Update(id:string, projectDto:ProjectUpdateDto) : IActionResult
+    + Delete(id:string) : IActionResult
+}
+ControllerBase <|-- ProjectsController
+@enduml

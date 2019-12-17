@@ -1,0 +1,12 @@
+@startuml
+interface ICollaborationService {
+    Create(createEvent:Event) : Task<Event>
+}
+class CollaborationService {
+    - <<readonly>> _collaborationRepository : ICollaborationRepository
+    - <<readonly>> _client : IClient
+    + CollaborationService(collaborationRepository:ICollaborationRepository, client:IClient)
+    + <<async>> Create(createEvent:Event) : Task<Event>
+}
+ICollaborationService <|-- CollaborationService
+@enduml

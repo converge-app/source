@@ -1,0 +1,10 @@
+@startuml
+class Event {
+    + Id : string <<get>> <<set>>
+    + ProjectId : string <<get>> <<set>>
+    + OwnerId : string <<get>> <<set>>
+    + Type : string <<get>> <<set>>
+    + Content : string <<get>> <<set>>
+    + Timestamp : long <<get>> <<set>>
+}
+@enduml

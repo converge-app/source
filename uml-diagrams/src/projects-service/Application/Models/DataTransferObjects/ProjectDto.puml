@@ -1,0 +1,8 @@
+@startuml
+class ProjectDto {
+    + Id : string <<get>> <<set>>
+    + OwnerId : string <<get>> <<set>>
+    + FreelancerId : string <<get>> <<set>>
+    + ProjectContent : ProjectContentDto <<get>> <<set>>
+}
+@enduml

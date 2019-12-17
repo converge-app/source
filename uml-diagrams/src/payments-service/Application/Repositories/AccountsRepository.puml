@@ -1,0 +1,23 @@
+@startuml
+interface IAccountsRepository {
+    Get() : Task<List<Account>>
+    GetById(id:string) : Task<Account>
+    Create(account:Account) : Task<Account>
+    Update(id:string, accountIn:Account) : Task
+    Remove(accountIn:Account) : Task
+    Remove(id:string) : Task
+    GetByUserId(userId:string) : Task<Account>
+}
+class AccountsRepository {
+    - <<readonly>> _accounts : IMongoCollection<Account>
+    + AccountsRepository(dbContext:IDatabaseContext)
+    + <<async>> Get() : Task<List<Account>>
+    + <<async>> GetById(id:string) : Task<Account>
+    + <<async>> Create(account:Account) : Task<Account>
+    + <<async>> Update(id:string, accountIn:Account) : Task
+    + <<async>> Remove(accountIn:Account) : Task
+    + <<async>> Remove(id:string) : Task
+    + <<async>> GetByUserId(userId:string) : Task<Account>
+}
+IAccountsRepository <|-- AccountsRepository
+@enduml

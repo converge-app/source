@@ -1,0 +1,8 @@
+@startuml
+class AuditDto {
+    + Id : string <<get>> <<set>>
+    + UserId : string <<get>> <<set>>
+    + Content : string <<get>> <<set>>
+    + Timestamp : long <<get>> <<set>>
+}
+@enduml

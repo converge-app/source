@@ -1,0 +1,12 @@
+@startuml
+class Account {
+    + Id : string <<get>> <<set>>
+    + UserId : string <<get>> <<set>>
+    + AccessToken : string <<get>> <<set>>
+    + LiveMode : bool <<get>> <<set>>
+    + RefreshToken : string <<get>> <<set>>
+    + StripePublisableKey : string <<get>> <<set>>
+    + StripeUserId : string <<get>> <<set>>
+    + Scope : string <<get>> <<set>>
+}
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+interface IDatabaseContext {
+    Projects : IMongoCollection<Project> <<get>>
+    IsConnectionOpen() : bool
+}
+class DatabaseContext {
+    - <<readonly>> _database : IMongoDatabase
+    + DatabaseContext(settings:IDatabaseSettings)
+    + Projects : IMongoCollection<Project> <<get>>
+    + IsConnectionOpen() : bool
+}
+IDatabaseContext <|-- DatabaseContext
+@enduml

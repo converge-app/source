@@ -1,0 +1,11 @@
+@startuml
+class Transaction {
+    + Id : string <<get>> <<set>>
+    + OwnerId : string <<get>> <<set>>
+    + from : string <<get>> <<set>>
+    + to : string <<get>> <<set>>
+    + amount : decimal <<get>> <<set>>
+    + status : string <<get>> <<set>>
+    + count : bool <<get>> <<set>>
+}
+@enduml

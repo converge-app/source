@@ -1,0 +1,24 @@
+@startuml
+interface IUserRepository {
+    Get() : List<User>
+    GetById(id:string) : User
+    GetByEmail(email:string) : User
+    Create(user:User) : User
+    Update(id:string, userIn:User) : void
+    Remove(userIn:User) : void
+    Remove(id:string) : void
+}
+class UserRepository {
+    - <<readonly>> _users : IMongoCollection<User>
+    - <<readonly>> dbContext : IDatabaseContext
+    + UserRepository(dbContext:IDatabaseContext)
+    + Get() : List<User>
+    + GetById(id:string) : User
+    + GetByEmail(email:string) : User
+    + Create(user:User) : User
+    + Update(id:string, userIn:User) : void
+    + Remove(userIn:User) : void
+    + Remove(id:string) : void
+}
+IUserRepository <|-- UserRepository
+@enduml

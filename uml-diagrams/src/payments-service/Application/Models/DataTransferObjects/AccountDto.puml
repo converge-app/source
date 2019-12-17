@@ -1,0 +1,9 @@
+@startuml
+class AccountDto {
+    + Id : string <<get>> <<set>>
+    + UserId : string <<get>> <<set>>
+    + LiveMode : bool <<get>> <<set>>
+    + StripeUserId : string <<get>> <<set>>
+    + Scope : string <<get>> <<set>>
+}
+@enduml

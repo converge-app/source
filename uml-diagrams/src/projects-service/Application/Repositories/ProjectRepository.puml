@@ -1,0 +1,30 @@
+@startuml
+interface IProjectRepository {
+    Get() : List<Project>
+    GetById(id:string) : Project
+    GetByOwnerId(ownerId:string) : Project
+    GetByFreelancerId(freelancerId:string) : Project
+    Create(project:Project) : Project
+    Update(id:string, projectIn:Project) : void
+    Remove(projectIn:Project) : void
+    Remove(id:string) : void
+    GetAllFreelancerIsNull() : Task<List<Project>>
+    getByUser(userId:string) : Task<List<Project>>
+}
+class ProjectRepository {
+    - <<readonly>> dbContext : IDatabaseContext
+    - <<readonly>> _projects : IMongoCollection<Project>
+    + ProjectRepository(dbContext:IDatabaseContext)
+    + Get() : List<Project>
+    + GetById(id:string) : Project
+    + GetByOwnerId(ownerId:string) : Project
+    + GetByFreelancerId(freelancerId:string) : Project
+    + Create(project:Project) : Project
+    + Update(id:string, projectIn:Project) : void
+    + Remove(projectIn:Project) : void
+    + Remove(id:string) : void
+    + <<async>> GetAllFreelancerIsNull() : Task<List<Project>>
+    + <<async>> getByUser(userId:string) : Task<List<Project>>
+}
+IProjectRepository <|-- ProjectRepository
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+interface IFileRepository {
+    Get() : Task<List<File>>
+    GetById(id:string) : Task<File>
+    GetByUserId(userId:string) : Task<IList<File>>
+    Create(file:File) : Task<File>
+    Update(id:string, fileIn:File) : Task
+    Remove(fileIn:File) : Task
+    Remove(id:string) : Task
+}
+class FileRepository {
+    - <<readonly>> _files : IMongoCollection<File>
+    + FileRepository(dbContext:IDatabaseContext)
+    + <<async>> Get() : Task<List<File>>
+    + <<async>> GetById(id:string) : Task<File>
+    + <<async>> GetByUserId(userId:string) : Task<IList<File>>
+    + <<async>> Create(file:File) : Task<File>
+    + <<async>> Update(id:string, fileIn:File) : Task
+    + <<async>> Remove(fileIn:File) : Task
+    + <<async>> Remove(id:string) : Task
+}
+IFileRepository <|-- FileRepository
+@enduml

@@ -1,0 +1,5 @@
+@startuml
+class PaymentIntentCreatedDto {
+    + ClientSecret : string <<get>> <<set>>
+}
+@enduml

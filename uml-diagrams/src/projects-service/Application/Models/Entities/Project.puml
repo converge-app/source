@@ -1,0 +1,8 @@
+@startuml
+class Project {
+    + Id : string <<get>> <<set>>
+    + OwnerId : string <<get>> <<set>>
+    + FreelancerId : string <<get>> <<set>>
+    + ProjectContent : ProjectContent <<get>> <<set>>
+}
+@enduml

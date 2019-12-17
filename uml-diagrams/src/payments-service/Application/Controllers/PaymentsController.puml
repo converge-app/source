@@ -1,0 +1,16 @@
+@startuml
+class PaymentsController {
+    - <<const>> ServiceKey : string = "sk_test_dEYerF4aiezK453envsRBmWZ"
+    - <<readonly>> _mapper : IMapper
+    - <<readonly>> _accountsRepository : IAccountsRepository
+    - <<readonly>> _paymentRepository : IPaymentRepository
+    - <<readonly>> _paymentservice : IPaymentservice
+    + PaymentsController(paymentservice:IPaymentservice, paymentsRepository:IPaymentRepository, mapper:IMapper, accountsRepository:IAccountsRepository)
+    + <<async>> StartDeposit(depositCreationDto:DepositCreationDto) : Task<IActionResult>
+    + <<async>> StartWithdraw(withdrawCreationDto:WithdrawCreationDto) : Task<IActionResult>
+    + <<async>> GetBalance(userId:string) : Task<IActionResult>
+    + <<async>> GetBalanceHistory(userId:string) : Task<IActionResult>
+    + <<async>> Transfer(transferCreationDto:TransferCreationDto) : Task<IActionResult>
+}
+ControllerBase <|-- PaymentsController
+@enduml

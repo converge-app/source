@@ -1,0 +1,14 @@
+@startuml
+interface IProfileService {
+    CreateProfile(createProfile:Profile) : Task<Profile>
+    UpdateProfile(updateProfile:Profile) : Task<Profile>
+}
+class ProfileService {
+    - <<readonly>> _profileRepository : IProfileRepository
+    - <<readonly>> _client : IClient
+    + ProfileService(profileRepository:IProfileRepository, client:IClient)
+    + <<async>> CreateProfile(createProfile:Profile) : Task<Profile>
+    + <<async>> UpdateProfile(updateProfile:Profile) : Task<Profile>
+}
+IProfileService <|-- ProfileService
+@enduml

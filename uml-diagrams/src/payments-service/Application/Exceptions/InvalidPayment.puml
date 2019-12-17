@@ -1,0 +1,9 @@
+@startuml
+class InvalidPayment {
+    + InvalidPayment()
+    + InvalidPayment(message:string)
+    + InvalidPayment(message:string, inner:Exception)
+    # InvalidPayment(info:SerializationInfo, context:StreamingContext)
+}
+Exception <|-- InvalidPayment
+@enduml

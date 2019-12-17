@@ -1,0 +1,9 @@
+@startuml
+class TransactionsController {
+    - <<readonly>> _mapper : IMapper
+    - <<readonly>> _paymentRepository : IPaymentRepository
+    - <<readonly>> _paymentservice : IPaymentservice
+    + TransactionsController(paymentservice:IPaymentservice, paymentRepository:IPaymentRepository, mapper:IMapper)
+}
+ControllerBase <|-- TransactionsController
+@enduml

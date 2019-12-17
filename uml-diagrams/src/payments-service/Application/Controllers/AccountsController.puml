@@ -1,0 +1,11 @@
+@startuml
+class AccountsController {
+    - <<readonly>> _mapper : IMapper
+    - <<readonly>> _logger : ILogger<AccountsController>
+    - <<readonly>> _accountsRepository : IAccountsRepository
+    + AccountsController(paymentRepository:IAccountsRepository, mapper:IMapper, logger:ILogger<AccountsController>)
+    + <<async>> CreateAccountAsync(createAccountDto:CreateAccountDto) : Task<IActionResult>
+    + <<async>> GetAccountByUserId(userId:string) : Task<IActionResult>
+}
+ControllerBase <|-- AccountsController
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+interface IPaymentservice {
+}
+class Paymentservice {
+    - <<readonly>> _paymentRepository : IPaymentRepository
+    - <<readonly>> _client : IClient
+    + Paymentservice(paymentRepository:IPaymentRepository, client:IClient)
+}
+IPaymentservice <|-- Paymentservice
+@enduml

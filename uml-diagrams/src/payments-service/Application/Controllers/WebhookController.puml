@@ -1,0 +1,10 @@
+@startuml
+class WebhookController {
+    <<const>> secret : string = "whsec_wx5T4KMQt2SVbEytgs2GecG7zXT0Tp2z"
+    - <<readonly>> _logger : ILogger<WebhookController>
+    - <<readonly>> _accountsRepository : IAccountsRepository
+    + WebhookController(logger:ILogger<WebhookController>, accountsRepository:IAccountsRepository)
+    + <<async>> PostAsync() : System.Threading.Tasks.Task<IActionResult>
+}
+Controller <|-- WebhookController
+@enduml

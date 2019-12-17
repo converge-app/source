@@ -1,0 +1,15 @@
+@startuml
+interface IDatabaseContext {
+    Payments : IMongoCollection<Transaction> <<get>>
+    Accounts : IMongoCollection<Account> <<get>>
+    IsConnectionOpen() : bool
+}
+class DatabaseContext {
+    - <<readonly>> _database : IMongoDatabase
+    + DatabaseContext(settings:IDatabaseSettings)
+    + Payments : IMongoCollection<Transaction> <<get>>
+    + Accounts : IMongoCollection<Account> <<get>>
+    + IsConnectionOpen() : bool
+}
+IDatabaseContext <|-- DatabaseContext
+@enduml

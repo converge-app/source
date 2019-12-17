@@ -1,0 +1,17 @@
+@startuml
+interface ICollaborationRepository {
+    Get() : Task<List<Event>>
+    GetById(id:string) : Task<Event>
+    Create(@event:Event) : Task<Event>
+    GetByProjectId(projectId:string) : Task<IOrderedEnumerable<Event>>
+}
+class CollaborationRepository {
+    - <<readonly>> _collaborations : IMongoCollection<Event>
+    + CollaborationRepository(dbContext:IDatabaseContext)
+    + <<async>> Get() : Task<List<Event>>
+    + <<async>> GetById(id:string) : Task<Event>
+    + <<async>> Create(@event:Event) : Task<Event>
+    + <<async>> GetByProjectId(projectId:string) : Task<IOrderedEnumerable<Event>>
+}
+ICollaborationRepository <|-- CollaborationRepository
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+interface IFileService {
+    UploadFile(file:File, formFile:IFormFile) : Task<File>
+}
+class FileService {
+    - <<readonly>> _fileRepository : IFileRepository
+    - _credentials : GoogleCredential
+    + FileService(fileRepository:IFileRepository)
+    + <<async>> UploadFile(file:File, formFile:IFormFile) : Task<File>
+}
+IFileService <|-- FileService
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+interface IAuditRepository {
+    Create(audit:Audit) : Task<Audit>
+    GetByUserId(userId:string) : Task<List<Audit>>
+    GetByUserId(userId:string, pageSize:int, pageNumber:int) : List<Audit>
+}
+class AuditRepository {
+    - <<readonly>> _audit : IMongoCollection<Audit>
+    + AuditRepository(dbContext:IDatabaseContext)
+    + <<async>> Create(audit:Audit) : Task<Audit>
+    + <<async>> GetByUserId(userId:string) : Task<List<Audit>>
+    + GetByUserId(userId:string, pageSize:int, pageNumber:int) : List<Audit>
+}
+IAuditRepository <|-- AuditRepository
+@enduml

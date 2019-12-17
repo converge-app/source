@@ -1,0 +1,9 @@
+@startuml
+class InvalidProject {
+    + InvalidProject()
+    + InvalidProject(message:string)
+    + InvalidProject(message:string, inner:Exception)
+    # InvalidProject(info:SerializationInfo, context:StreamingContext)
+}
+Exception <|-- InvalidProject
+@enduml

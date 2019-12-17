@@ -1,0 +1,15 @@
+@startuml
+class ProfilesController {
+    - <<readonly>> _mapper : IMapper
+    - <<readonly>> _profileRepository : IProfileRepository
+    - <<readonly>> _profileService : IProfileService
+    + ProfilesController(profileService:IProfileService, profileRepository:IProfileRepository, mapper:IMapper)
+    + <<async>> Create(profileDto:ProfileCreationDto) : Task<IActionResult>
+    + <<async>> Update(profileId:string, profileDto:ProfileUpdateDto) : Task<IActionResult>
+    + <<async>> GetAll() : Task<IActionResult>
+    + <<async>> GetById(id:string) : Task<IActionResult>
+    + <<async>> Delete(id:string) : Task<IActionResult>
+    + <<async>> GetByUserId(userId:string) : Task<IActionResult>
+}
+ControllerBase <|-- ProfilesController
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+class DepositCreationDto {
+    + UserId : string <<get>> <<set>>
+    + Amount : long <<get>> <<set>>
+}
+@enduml

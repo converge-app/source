@@ -1,0 +1,25 @@
+@startuml
+interface IProfileRepository {
+    Get() : Task<List<Profile>>
+    GetById(id:string) : Task<Profile>
+    Create(profile:Profile) : Task<Profile>
+    Update(id:string, profileIn:Profile) : Task
+    Remove(profileIn:Profile) : Task
+    Remove(id:string) : Task
+    UserIdExists(userId:string) : Task<bool>
+    GetByUserId(userId:string) : Task<Profile>
+}
+class ProfileRepository {
+    - <<readonly>> _profiles : IMongoCollection<Profile>
+    + ProfileRepository(dbContext:IDatabaseContext)
+    + <<async>> Get() : Task<List<Profile>>
+    + <<async>> GetById(id:string) : Task<Profile>
+    + <<async>> UserIdExists(userId:string) : Task<bool>
+    + <<async>> GetByUserId(userId:string) : Task<Profile>
+    + <<async>> Create(profile:Profile) : Task<Profile>
+    + <<async>> Update(id:string, profileIn:Profile) : Task
+    + <<async>> Remove(profileIn:Profile) : Task
+    + <<async>> Remove(id:string) : Task
+}
+IProfileRepository <|-- ProfileRepository
+@enduml

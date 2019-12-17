@@ -1,0 +1,9 @@
+@startuml
+class AuthClient <<static>> {
+    - <<const>> _serviceHttp : string = "AUTHENTICATION_SERVICE_HTTP"
+    - <<const>> _serviceHttps : string = "AUTHENTICATION_SERVICE_HTTPS"
+    + {static} <<async>> Register(factory:IClient, data:AuthRegisterData) : Task<AuthRegisteredData>
+    + {static} <<async>> Authenticate(factory:IClient, data:AuthData) : Task<AuthenticatedData>
+    - {static} GetAuthServiceHost() : string
+}
+@enduml

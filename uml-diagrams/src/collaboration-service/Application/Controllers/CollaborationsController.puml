@@ -1,0 +1,13 @@
+@startuml
+class CollaborationsController {
+    - <<readonly>> _mapper : IMapper
+    - <<readonly>> _collaborationRepository : ICollaborationRepository
+    - <<readonly>> _collaborationService : ICollaborationService
+    + CollaborationsController(collaborationService:ICollaborationService, collaborationRepository:ICollaborationRepository, mapper:IMapper)
+    + <<async>> PostEvent(eventDto:EventCreationDto) : Task<IActionResult>
+    + <<async>> GetAll() : Task<IActionResult>
+    + <<async>> GetByProjectId(projectId:string) : Task<IActionResult>
+    + <<async>> GetById(id:string) : Task<IActionResult>
+}
+ControllerBase <|-- CollaborationsController
+@enduml

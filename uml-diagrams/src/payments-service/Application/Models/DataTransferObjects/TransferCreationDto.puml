@@ -1,0 +1,7 @@
+@startuml
+class TransferCreationDto {
+    + SenderId : string <<get>> <<set>>
+    + ReceiverId : string <<get>> <<set>>
+    + Amount : long <<get>> <<set>>
+}
+@enduml

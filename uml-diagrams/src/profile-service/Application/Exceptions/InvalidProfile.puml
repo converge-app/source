@@ -1,0 +1,9 @@
+@startuml
+class InvalidProfile {
+    + InvalidProfile()
+    + InvalidProfile(message:string)
+    + InvalidProfile(message:string, inner:Exception)
+    # InvalidProfile(info:SerializationInfo, context:StreamingContext)
+}
+Exception <|-- InvalidProfile
+@enduml

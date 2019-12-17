@@ -1,0 +1,9 @@
+@startuml
+class InvalidAudit {
+    + InvalidAudit()
+    + InvalidAudit(message:string)
+    + InvalidAudit(message:string, inner:Exception)
+    # InvalidAudit(info:SerializationInfo, context:StreamingContext)
+}
+Exception <|-- InvalidAudit
+@enduml

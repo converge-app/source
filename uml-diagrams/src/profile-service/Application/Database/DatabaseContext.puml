@@ -1,0 +1,13 @@
+@startuml
+interface IDatabaseContext {
+    Profiles : IMongoCollection<Profile> <<get>>
+    IsConnectionOpen() : bool
+}
+class DatabaseContext {
+    - <<readonly>> _database : IMongoDatabase
+    + DatabaseContext(settings:IDatabaseSettings)
+    + Profiles : IMongoCollection<Profile> <<get>>
+    + IsConnectionOpen() : bool
+}
+IDatabaseContext <|-- DatabaseContext
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+class InvalidFile {
+    + InvalidFile()
+    + InvalidFile(message:string)
+    + InvalidFile(message:string, inner:Exception)
+    # InvalidFile(info:SerializationInfo, context:StreamingContext)
+}
+Exception <|-- InvalidFile
+@enduml

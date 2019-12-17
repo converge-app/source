@@ -1,0 +1,14 @@
+@startuml
+class FilesController {
+    - <<readonly>> _mapper : IMapper
+    - <<readonly>> _hostingEnvironment : IHostingEnvironment
+    - <<readonly>> _fileRepository : IFileRepository
+    - <<readonly>> _fileService : IFileService
+    + FilesController(fileService:IFileService, fileRepository:IFileRepository, mapper:IMapper, hostingEnvironment:IHostingEnvironment)
+    + <<async>> UploadFile(file:IFormFile) : Task<IActionResult>
+    + <<async>> GetAll() : Task<IActionResult>
+    + <<async>> Get(id:string) : Task<IActionResult>
+    + <<async>> GetByUserId(userId:string) : Task<IActionResult>
+}
+Controller <|-- FilesController
+@enduml

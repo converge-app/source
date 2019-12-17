@@ -1,0 +1,11 @@
+@startuml
+class ProfileCreationDto {
+    + UserId : string <<get>> <<set>>
+    + ProfilePictureUrl : string <<get>> <<set>>
+    + Title : string <<get>> <<set>>
+    + Rating : decimal <<get>> <<set>>
+    + Description : string <<get>> <<set>>
+    + Skills : List<string> <<get>> <<set>>
+    + Experience : List<string> <<get>> <<set>>
+}
+@enduml

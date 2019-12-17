@@ -1,0 +1,21 @@
+@startuml
+interface IPaymentRepository {
+    Get() : Task<List<Transaction>>
+    GetById(id:string) : Task<Transaction>
+    Create(payment:Transaction) : Task<Transaction>
+    Update(id:string, paymentIn:Transaction) : Task
+    Remove(paymentIn:Transaction) : Task
+    Remove(id:string) : Task
+}
+class PaymentRepository {
+    - <<readonly>> _payments : IMongoCollection<Transaction>
+    + PaymentRepository(dbContext:IDatabaseContext)
+    + <<async>> Get() : Task<List<Transaction>>
+    + <<async>> GetById(id:string) : Task<Transaction>
+    + <<async>> Create(payment:Transaction) : Task<Transaction>
+    + <<async>> Update(id:string, paymentIn:Transaction) : Task
+    + <<async>> Remove(paymentIn:Transaction) : Task
+    + <<async>> Remove(id:string) : Task
+}
+IPaymentRepository <|-- PaymentRepository
+@enduml

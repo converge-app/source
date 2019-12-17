@@ -1,0 +1,12 @@
+@startuml
+class ProfileServiceTest {
+    + CreateProfil_UserIdExists_ThrowsInvalidProfile() : void
+    + CreateProfil_CreateProfile_ReturnsUserProfile() : void
+    + <<async>> Create_GetUserAsync() : void
+    + UpdateProfile_GetById_ThrowsInvalidProfile() : void
+    + UpdateProfile_GotById_ReturnsUserProfileTitle() : void
+    + <<async>> UpdateProfile_GotById_ReturnsUserProfileDescription() : Task
+    + <<async>> UpdateProfile_GotById_ReturnsUserProfileSkills() : Task
+    + <<async>> UpdateProfile_GotById_ReturnsUserProfileExperience() : Task
+}
+@enduml

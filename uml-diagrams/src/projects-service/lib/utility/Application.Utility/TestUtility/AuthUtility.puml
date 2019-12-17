@@ -1,0 +1,11 @@
+@startuml
+class AuthUtility <<static>> {
+    + {static} <<async>> RegisterUser(client:HttpClient, user:AuthRegisterData, isLocal:bool) : Task<AuthRegisteredData>
+    + {static} <<async>> AuthenticateUser(client:HttpClient, data:AuthData, isLocal:bool) : Task<AuthenticatedData>
+    + {static} GenerateUser() : AuthRegisterData
+    + {static} GenerateCredentials(data:AuthRegisterData) : AuthData
+    + {static} GenerateCredentials(email:string, password:string) : AuthData
+    + {static} <<async>> GenerateAndAuthenticate(client:HttpClient, isLocal:bool) : Task<AuthenticatedData>
+    + {static} AddAuthorization(client:HttpClient, token:string) : HttpClient
+}
+@enduml

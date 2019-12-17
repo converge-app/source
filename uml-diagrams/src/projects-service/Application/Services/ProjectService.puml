@@ -1,0 +1,14 @@
+@startuml
+interface IProjectService {
+    Create(project:Project) : Task<Project>
+    Update(projectParam:Project) : void
+}
+class ProjectService {
+    - <<readonly>> _projectRepository : IProjectRepository
+    - <<readonly>> _client : IClient
+    + ProjectService(projectRepository:IProjectRepository, client:IClient)
+    + <<async>> Create(project:Project) : Task<Project>
+    + Update(project:Project) : void
+}
+IProjectService <|-- ProjectService
+@enduml

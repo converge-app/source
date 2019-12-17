@@ -1,0 +1,9 @@
+@startuml
+class InvalidStripeUser {
+    + InvalidStripeUser()
+    + InvalidStripeUser(message:string)
+    + InvalidStripeUser(message:string, inner:Exception)
+    # InvalidStripeUser(info:SerializationInfo, context:StreamingContext)
+}
+Exception <|-- InvalidStripeUser
+@enduml
